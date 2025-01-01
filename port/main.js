@@ -178,3 +178,4 @@ function obtenerConsejoCiberseguridad(event) {
 ipcMain.on('get-security-advice', (event) => {
     obtenerConsejoCiberseguridad(event);
 });
+//modificiacion de secreto
