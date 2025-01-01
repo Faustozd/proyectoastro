@@ -1,0 +1,213 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #1E2A38;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: #2B3A4A;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 350px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3CD1C2;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #1E2A38;
+    color: #FFF;
+    font-size: 1rem;
+}
+
+.input-container label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #CCC;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.input-container input:focus + label, 
+.input-container input:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: #3CD1C2;
+}
+
+.input-container select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #1E2A38;
+    color: #FFF;
+    font-size: 1rem;
+}
+
+.input-container select:focus {
+    border: 2px solid #3CD1C2;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #3CD1C2;
+    color: #FFF;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 15px;
+}
+
+.login-button:hover {
+    background: #31B8A3;
+}
+
+.login-box p {
+    text-align: center;
+    margin-top: 10px;
+    color: #CCC;
+    font-size: 0.9rem;
+}
+
+.login-box p a {
+    color: #3CD1C2;
+    text-decoration: none;
+}
+
+.login-box p a:hover {
+    text-decoration: underline;
+}
+
+button.login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #3CD1C2;
+    color: #FFF;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+button.login-button:hover {
+    background: #31B8A3;
+}  
+
+/* Coherencia con estilos de la pantalla principal */
+.sidebar {
+    background: #2B3A4A;
+}
+
+.logo {
+    color: #3CD1C2;
+}
+
+nav li {
+    color: #CCC;
+}
+
+nav li.active, nav li:hover {
+    color: #3CD1C2;
+}
+
+.card {
+    background: #2B3A4A;
+}
+
+.card h3 {
+    color: #3CD1C2;
+}
+
+.button {
+    background: #3CD1C2;
+    color: #FFF;
+}
+
+.button:hover {
+    background: #31B8A3;
+}
+
+.button-secondary {
+    background: #3AB3F9;
+}
+
+.button-secondary:hover {
+    background: #1C8FD4;
+}
+
+#scanLogs {
+    background: #1E2A38;
+    color: #FFF;
+}
+
+.progress-circle circle {
+    stroke: #444;
+}
+
+#progress {
+    stroke: #3CD1C2;
+}
+
+.progress-text {
+    color: #3CD1C2;
+}  
+
+/* Ajustes generales para coherencia */
+.input-container input:focus, 
+.input-container select:focus {
+    outline: none;
+    border: 2px solid #3CD1C2;
+}
+
+button:focus, .login-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #3CD1C2;
+}
+
+::placeholder {
+    color: #CCC;
+}
+
+input::placeholder {
+    color: #CCC;
+}  
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+select:focus::placeholder {
+    color: transparent;
+}

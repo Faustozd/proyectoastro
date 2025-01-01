@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escáner de Puertos</title>
+    <link rel="stylesheet" href="../styles/principal_screen_style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="logo">ASTRO</h1>
+            <nav>
+                <ul>
+                    <li class="active">Panel Principal</li>
+                    <li id="portScannerLink">Información del Escanner de Puertos</li>
+                    <li id="cleanerLink">Información del Escanner de Archivos</li>
+                    <li id="logsLink">Logs</li>
+                    <li id="settingsLink">Settings</li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <h2>Astro Basic Tools</h2>
+                <p>Optimiza y Analiza tu PC</p>
+            </header>
+
+            <div class="main-section">
+                <div class="card large-card">
+                    <h3>Escaner De Puertos</h3>
+                    <button class="button" id="startScanBtn">Iniciar Escaneo</button>
+                    <p id="scanStatus">Esperando...</p>
+                    <div class="progress-circle">
+                        <svg>
+                            <circle cx="50" cy="50" r="45"></circle>
+                            <circle id="progress" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="progress-text" id="progressText">0%</div>
+                    </div>
+                    <h3>Logs del Escaneo</h3>
+                    <pre id="scanLogs">No hay registros disponibles...</pre>
+                    <button class="button button-secondary" id="closePortsBtn">Cerrar Puertos</button>
+                </div>
+
+                <div class="card medium-card">
+                    <h3>Análisis de Archivos</h3>
+                    <button class="button" id="scanFileBtn">Escanear Archivo</button>
+                    <p id="fileScanResult">Esperando archivo...</p>
+                    <h3>Seleccionar Archivo</h3>
+                    <label for="fileInput" class="file-upload-label">Seleccionar Archivo</label>
+                    <input type="file" id="fileInput">
+                    <p id="fileName">Ningún archivo seleccionado</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="floatingButton">💡</button>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <h2>Consejo de Seguridad</h2>
+            <p id="aiAdvice">Aquí aparecerá un consejo de seguridad generado por IA...</p>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const fileName = document.getElementById('fileName');
+        const portScannerLink = document.getElementById('portScannerLink');
+        const cleanerLink = document.getElementById('cleanerLink');
+        const logsLink = document.getElementById('logsLink');
+        const settingsLink = document.getElementById('settingsLink');
+        const popup = document.getElementById('popup');
+        const closePopup = document.getElementById('closePopup');
+
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files && fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                fileName.textContent = `Archivo agregado: ${file.name}`;
+            } else {
+                fileName.textContent = "Ningún archivo seleccionado";
+            }
+        });
+
+        portScannerLink.addEventListener('click', () => {
+            window.location.href = 'port_scanner.html';
+        });
+
+        cleanerLink.addEventListener('click', () => {
+            window.location.href = 'virus_total_info.html';
+        });
+
+        logsLink.addEventListener('click', () => {
+            window.location.href = 'logs.html';
+        });
+
+        settingsLink.addEventListener('click', () => {
+            window.location.href = 'settings.html';
+        });
+
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
+
+    <script src="../scripts/principal_screen_script.js"></script>
+</body>
+</html>

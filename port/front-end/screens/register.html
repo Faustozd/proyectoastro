@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Registro de Usuario</title>
+    <link rel="stylesheet" href="../styles/register_styles.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <h2>Crear Cuenta</h2>
+            <form>
+                <div class="input-container">
+                    <input type="text" id="fullname" required>
+                    <label for="fullname">Nombre Completo</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" id="email" required>
+                    <label for="email">Correo Electrónico</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="username" required>
+                    <label for="username">Nombre de Usuario</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" required>
+                    <label for="password">Contraseña</label>
+                </div>
+                <button type="submit" class="register-button">Registrar</button>
+                <button type="button" class="cancel-button" onclick="window.history.back()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

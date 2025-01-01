@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Escáner de Archivos con VirusTotal</title>
+    <link rel="stylesheet" href="../styles/virust_total_info_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Información del Escáner de Archivos con VirusTotal</h1>
+
+        <h2>1. ¿Qué es este programa?</h2>
+        <p>Este programa utiliza la API de VirusTotal para analizar archivos en busca de contenido malicioso. Al subir un archivo a la plataforma de VirusTotal, este realiza un análisis utilizando múltiples motores antivirus y genera un informe detallado.</p>
+
+        <h2>2. ¿Qué es VirusTotal?</h2>
+        <p>VirusTotal es un servicio en línea que permite analizar archivos y URLs para detectar virus, malware y otras amenazas. Utiliza decenas de motores antivirus para proporcionar resultados confiables y rápidos.</p>
+
+        <h2>3. ¿Qué hace este programa?</h2>
+        <p>El programa realiza las siguientes tareas principales:</p>
+        <ul>
+            <li><strong>Subir archivos:</strong> Envía un archivo especificado a la API de VirusTotal para su análisis.</li>
+            <li><strong>Consultar resultados:</strong> Recupera el informe de análisis con estadísticas sobre detecciones de malware.</li>
+        </ul>
+                
+        <h2>4. ¿Qué información muestra el programa?</h2>
+        <ul>
+            <li><strong>Estado del análisis:</strong> Si el análisis está en curso o completado.</li>
+            <li><strong>Estadísticas de detección:</strong> Número de motores antivirus que marcaron el archivo como malicioso.</li>
+        </ul>
+
+        <h2>5. ¿Cómo funciona el programa?</h2>
+        <p>El script sigue estos pasos:</p>
+        <ol>
+            <li>Verifica que el archivo especificado existe.</li>
+            <li>Envía el archivo a VirusTotal utilizando su API mediante un <strong>POST</strong>.</li>
+            <li>Consulta periódicamente el estado del análisis mediante un <strong>GET</strong>.</li>
+            <li>Cuando el análisis se completa, muestra las estadísticas del informe.</li>
+        </ol>
+
+        <h2>6. Advertencias importantes</h2>
+        <ul>
+            <li>El programa requiere una clave API válida para funcionar.</li>
+            <li>El análisis de VirusTotal es público por defecto; los archivos subidos pueden ser visibles para otros usuarios.</li>
+            <li>Solo use este programa con archivos que tenga derecho a analizar.</li>
+        </ul>
+
+        <button class="button regresar" onclick="window.history.back()">Regresar</button>
+    </div>
+</body>
+</html>

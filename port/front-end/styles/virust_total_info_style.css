@@ -1,0 +1,171 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #1E2A38;
+    color: #FFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #2B3A4A;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #3CD1C2;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #3CD1C2;
+    margin: 20px 0 10px;
+    text-align: left;
+}
+
+p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #3CD1C2;
+}
+
+/* Botón personalizado */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3CD1C2;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.button:hover {
+    background: #31B8A3;
+}
+
+/* Botón de Regresar */
+.regresar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #3CD1C2;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.regresar:hover {
+    background: #31B8A3;
+}
+
+/* Efecto de transición para enlaces */
+a {
+    color: #3CD1C2;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #31B8A3;
+}
+
+/* Sección de advertencia */
+.warning {
+    background: #B33A3A;
+    color: #FFF;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.warning ul li::before {
+    color: #FFF;
+}
+
+/* Listas con estilo */
+ul li {
+    position: relative;
+    padding-left: 25px;
+}
+
+ul li::before {
+    content: '\2022';
+    color: #3CD1C2;
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+    margin-left: -20px;
+}
+
+/* Títulos centrados */
+h1, h2 {
+    text-align: center;
+}
+
+/* Espaciado entre secciones */
+h2 + p, h2 + ul {
+    margin-top: 10px;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, li {
+        font-size: 0.9rem;
+    }
+
+    .button, .regresar {
+        font-size: 0.9rem;
+    }
+}
