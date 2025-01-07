@@ -37,9 +37,9 @@ function ejecutarScriptCierrePuertos(target, ports, event) {
 }
 
 // Modificar la configuración de ipcMain
-ipcMain.on('close-unnecessary-ports', (event, data) => {
-    ejecutarScriptCierrePuertos(data.target, data.openPorts, event);
-});
+//ipcMain.on('close-unnecessary-ports', (event, data) => {
+  //  ejecutarScriptCierrePuertos(data.target, data.openPorts, event);
+//});
 
 
 
